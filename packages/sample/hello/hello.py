@@ -1,5 +1,3 @@
-import requests
-
 def main(args):
       cat = args.get("cat", "all")
       payload = {'category':cat}
