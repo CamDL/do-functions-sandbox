@@ -1,6 +1,8 @@
+import requests
+
 def main(args):
-      name = args.get("name", "stranger")
-      greeting = "Hello " + name + "!"
-      print(greeting)
-      return {"body": greeting}
+      cat = args.get("cat", "all")
+      payload = {'category':cat}
+      response = requests.get('https://inshortsapi.vercel.app/news',params=payload)
+      return response.json()
   
